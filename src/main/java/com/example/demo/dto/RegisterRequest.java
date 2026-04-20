@@ -1,14 +1,18 @@
 package com.example.demo.dto;
 
+import lombok.Data;
 
-
+@Data
 public class RegisterRequest {
 
     private String username;
     private String password;
     private String branchId;
     private String employeeCode;
-
+    private String phoneNumber;
+    private String email;
+    
+/*
     // Getter and Setter for username
     public String getUsername() {
         return username;
@@ -79,4 +83,5 @@ public class RegisterRequest {
         result = 31 * result + employeeCode.hashCode();
         return result;
     }
+    */
 }

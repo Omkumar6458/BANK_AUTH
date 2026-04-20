@@ -11,7 +11,7 @@ import com.example.demo.Repository.UserRepository;
 @Service
 public class AuthService {
 
-    private final UserRepository userRepo;
+    private final UserRepository userRepo; 
 
     // 🔹 Manual constructor (replacement of @RequiredArgsConstructor)
     public AuthService(UserRepository userRepo) {

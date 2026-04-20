@@ -4,7 +4,7 @@ package com.example.demo.Domain;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "permission")
+@Table(name = "permissions")
 public class Permission {
 
     @Id

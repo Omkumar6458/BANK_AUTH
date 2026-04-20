@@ -25,6 +25,13 @@ public class User {
     private String branchId;
 
     private String employeeCode;
+    
+    
+    private String phoneNumber;
+    
+    private String email;
+    
+    
 
     @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(
@@ -40,7 +47,7 @@ public class User {
 
     // 🔹 All-Args Constructor
     public User(Long id, String username, String password, boolean enabled,
-                String branchId, String employeeCode, Set<Role> roles) {
+                String branchId, String employeeCode, Set<Role> roles,String phoneNumber, String email) {
         this.id = id;
         this.username = username;
         this.password = password;
@@ -48,10 +55,34 @@ public class User {
         this.branchId = branchId;
         this.employeeCode = employeeCode;
         this.roles = roles;
+        this.phoneNumber= phoneNumber;
+        this.email = email;
     }
 
     // 🔹 Getters & Setters
-
+    
+    
+    public String getPhoneNumber()
+    {
+    	return phoneNumber;
+    }
+    
+    public void setPhoneNumber(String PhoneNumber)
+    {
+    	this.phoneNumber = PhoneNumber;
+    }
+    
+    public String getEmail()
+    {
+    	return email;
+    }
+    
+    public void setEmail(String email)
+    {
+    	this.email = email;
+    }
+    
+   
     public Long getId() {
         return id;
     }
@@ -107,4 +138,17 @@ public class User {
     public void setRoles(Set<Role> roles) {
         this.roles = roles;
     }
+    
+
+    
+    
+      
+    
 }
+
+
+
+
+
+
+

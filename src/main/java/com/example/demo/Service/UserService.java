@@ -1,6 +1,6 @@
 package com.example.demo.Service;
 
-import java.util.Set;
+
 
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -31,7 +31,8 @@ public class UserService {
     	user.setPassword(passwordEncoder.encode(request.getPassword()));
     	user.setBranchId(request.getBranchId());
     	user.setEmployeeCode(request.getEmployeeCode());
-    	
+    	user.setEmail(request.getEmail());
+    	user.setPhoneNumber(request.getPhoneNumber());
     	
 
     	return userRepo.save(user);

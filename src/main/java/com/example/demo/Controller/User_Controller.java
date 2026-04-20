@@ -10,11 +10,13 @@ import com.example.demo.Service.UserService;
 import com.example.demo.dto.RegisterRequest;
 
 
+
+
 @RestController
 @RequestMapping("/user")
 public class User_Controller {
    
-    private final UserService userService;
+    private final UserService userService; 
 
     //  Manual constructor (IMPORTANT)
     public User_Controller(UserService userService) {
@@ -23,9 +25,11 @@ public class User_Controller {
 
     @PostMapping("/register")
     public User register(@RequestBody RegisterRequest request) {
+    	
     	  System.out.println("🔥 REGISTER API HIT");
         return userService.register(request);
     }
+    
 }
 
 
