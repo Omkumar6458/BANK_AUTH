@@ -1,7 +1,6 @@
 package com.example.demo.Service;
 
 
-
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
@@ -15,15 +14,15 @@ import com.example.demo.dto.RegisterRequest;
 @Service
 public class UserService {
 
-    private final UserRepository userRepo;
-    private final PasswordEncoder passwordEncoder;
+    private final UserRepository userRepo; // this is var that : cantain obj
+    private final PasswordEncoder passwordEncoder; //
 
     //  Manually written constructor
     public UserService(UserRepository userRepo, PasswordEncoder passwordEncoder) {
         this.userRepo = userRepo;
         this.passwordEncoder = passwordEncoder;
     }
-
+    
     public User register(RegisterRequest request) {
 
     	User user = new User();
